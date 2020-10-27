@@ -1,0 +1,63 @@
+@import "font.css";
+
+/*
+  font-family: "Evogria";
+  font-family: "EBebas Neue Regular";
+
+
+
+240px
+
+*/
+
+/* common settings */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  text-transform: uppercase;
+}
+
+.product h1 {
+  font-family: "Evogria";
+  font-size: 48px;
+}
+
+.items h2 {
+  font-size: 36px;
+}
+
+.items h3 {
+  font-size: 24px;
+}
+
+.items p {
+  font-size: 60px;
+}
+
+.product {
+  color: #FFF;
+  background-image: url(../img/bg.png);
+  text-align: center;
+  background-size: cover;
+  background-position: 0 100%;
+}
+
+.product__title {
+    padding: 170px 0 90px;
+}
+
+.items {
+  font-family: "EBebas Neue Regular";
+}
+
+.items__card {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, rgba(0, 0, 0, 0.1));
+}
+
+.item__img {
+  padding: 25px 40px 45px;
+}
