@@ -12,11 +12,10 @@ h1, h2, h3 {
 }
 
 h2, h3, p, span {
-  transform: scale(1, 1.3);
+  transform: scale(1, 1.5);
   /* font-weight: 100; */
   letter-spacing: 1px;
 }
-
 
 .product h1 {
   font-family: "Evogria";
@@ -40,18 +39,29 @@ h2, h3, p, span {
   background-image: url(../img/bg.png);
   text-align: center;
   background-size: cover;
-  background-position: 0 100%;
+  background-position: center;
 }
 
 .product__title {
-    padding: 170px 0 90px;
+    padding-top: 170px;
 }
 
 .items {
   font-family: "Bebas Neue Regular";
+  position: relative;
+  z-index: 1;
+}
+
+.items::before {
+  content: "";
+  position: absolute;
+  background: url(../img/doska2.png) no-repeat;
+  height: 20px;
+  z-index: 10;
 }
 
 .items__card {
+  padding-top: 90px;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, rgba(0, 0, 0, 0.1));
 }
 
@@ -75,7 +85,7 @@ h2, h3, p, span {
 
 .item__prise {
   text-align: left;
-  padding: 26px 0 30px 50px;
+  padding: 22px 0 30px 50px;
   position: relative;
 }
 
@@ -132,9 +142,8 @@ input:active, :hover, :focus {
   padding-left: 35px;
 }
 
-
 section {
-  padding-bottom: 190px;
+  padding-bottom: 150px;
   overflow: hidden;
 }
 
@@ -170,4 +179,89 @@ section {
 
 ::-webkit-scrollbar {
   width: 4px;
+}
+
+
+////////////////
+
+
+/* media */
+@media (max-width: 767.98px) {
+  .items::before {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .items::before {
+    width: 700px;
+    top: 50%;
+    left: -1%;
+    display: block;
+  }
+
+  .items h3 {
+    font-size: 20px;
+  }
+
+  .items p {
+    font-size: 35px;
+  }
+  .item__prise::before {
+      font-size: 20px;
+      top: 18%;
+      left: 65%;
+  }
+  .item__prise {
+    padding: 22px 0 5px 25px;
+  }
+  .item__order {
+    padding-bottom: 20px;
+  }
+  .item__shop {
+    padding-left: 10px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+  .items h3 {
+    font-size: 20px;
+  }
+  .items p {
+    font-size: 40px;
+  }
+  .items::before {
+    width: 930px;
+    top: 55%;
+    left: 0;
+    display: block;
+  }
+}
+
+@media (min-width: 1200px) {
+  .items::before {
+    width: 1110px;
+    top: 57%;
+    left: 0;
+    display: block;
+  }
+}
+
+.owl-dots {
+  display: flex;
+}
+
+.owl-dot {
+  padding: 5px;
+  background: transparent;
+  border: 3px solid #fff;
+  border-radius: 10px;
+  width: 20px;
+  height: 15px;
+  margin: 20px 5px 20px 5px;
+}
+
+.owl-dot.active {
+  background: #FFF;
 }
