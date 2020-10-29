@@ -785,33 +785,33 @@
     },
 
     /** Detect if the options box is inside the window */
-    isInViewport: function() {
-      var _this = this;
-
-      if (_this.options.forceRenderAbove === true) {
-        _this.elements.outerWrapper.addClass(_this.classes.above);
-      } else if (_this.options.forceRenderBelow === true) {
-        _this.elements.outerWrapper.addClass(_this.classes.below);
-      } else {
-        var scrollTop = $win.scrollTop();
-        var winHeight = $win.height();
-        var uiPosX = _this.elements.outerWrapper.offset().top;
-        var uiHeight = _this.elements.outerWrapper.outerHeight();
-
-        var fitsDown = (uiPosX + uiHeight + _this.itemsHeight) <= (scrollTop + winHeight);
-        var fitsAbove = (uiPosX - _this.itemsHeight) > scrollTop;
-
-        // If it does not fit below, only render it
-        // above it fit's there.
-        // It's acceptable that the user needs to
-        // scroll the viewport to see the cut off UI
-        var renderAbove = !fitsDown && fitsAbove;
-        var renderBelow = !renderAbove;
-
-        _this.elements.outerWrapper.toggleClass(_this.classes.above, renderAbove);
-        _this.elements.outerWrapper.toggleClass(_this.classes.below, renderBelow);
-      }
-    },
+    // isInViewport: function() {
+    //   var _this = this;
+    //
+    //   if (_this.options.forceRenderAbove === true) {
+    //     _this.elements.outerWrapper.addClass(_this.classes.above);
+    //   } else if (_this.options.forceRenderBelow === true) {
+    //     _this.elements.outerWrapper.addClass(_this.classes.below);
+    //   } else {
+    //     var scrollTop = $win.scrollTop();
+    //     var winHeight = $win.height();
+    //     var uiPosX = _this.elements.outerWrapper.offset().top;
+    //     var uiHeight = _this.elements.outerWrapper.outerHeight();
+    //
+    //     var fitsDown = (uiPosX + uiHeight + _this.itemsHeight) <= (scrollTop + winHeight);
+    //     var fitsAbove = (uiPosX - _this.itemsHeight) > scrollTop;
+    //
+    //     // If it does not fit below, only render it
+    //     // above it fit's there.
+    //     // It's acceptable that the user needs to
+    //     // scroll the viewport to see the cut off UI
+    //     var renderAbove = !fitsDown && fitsAbove;
+    //     var renderBelow = !renderAbove;
+    //
+    //     _this.elements.outerWrapper.toggleClass(_this.classes.above, renderAbove);
+    //     _this.elements.outerWrapper.toggleClass(_this.classes.below, renderBelow);
+    //   }
+    // },
 
     /**
      * Detect if currently selected option is visible and scroll the options box to show it

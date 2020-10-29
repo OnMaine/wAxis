@@ -153,15 +153,18 @@
   top: 100%;
   left: -50%;
   width: 120px !important;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.2);
   border: none;
   z-index: -1;
   box-shadow: 0 0 10px -6px;
+  border-radius: 3px;
 }
 
 .selectric-items .selectric-scroll {
   height: 100%;
   overflow: auto;
+  padding-right: 60px;
+
 }
 
 .selectric-above .selectric-items {
@@ -172,10 +175,9 @@
 .selectric-items ul, .selectric-items li {
   list-style: none;
   padding: 0;
-  margin: 10px 18px;
+  margin: 11px 5px 0px 5px;
   font-size: 24px;
   min-height: 20px;
-
 }
 
 .selectric-items li {
@@ -188,6 +190,7 @@
 .selectric-items li.selected {
   background: rgba(0, 0, 0, 0.2);
   color: #FFF;
+  border-radius: 5px;
 }
 
 .selectric-items li.highlighted {

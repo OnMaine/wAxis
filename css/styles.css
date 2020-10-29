@@ -1,7 +1,6 @@
 @import "font.css";
 
 /* common settings */
-
 * {
   margin: 0;
   padding: 0;
@@ -12,8 +11,6 @@ h1, h2, h3 {
 }
 
 h2, h3, p, span {
-  transform: scale(1, 1.5);
-  /* font-weight: 100; */
   letter-spacing: 1px;
 }
 
@@ -40,6 +37,7 @@ h2, h3, p, span {
   text-align: center;
   background-size: cover;
   background-position: center;
+  padding-bottom: 150px;
 }
 
 .product__title {
@@ -48,6 +46,7 @@ h2, h3, p, span {
 
 .items {
   font-family: "Bebas Neue Regular";
+  font-weight: 900;
   position: relative;
   z-index: 1;
 }
@@ -55,9 +54,20 @@ h2, h3, p, span {
 .items::before {
   content: "";
   position: absolute;
-  background: url(../img/doska2.png) no-repeat;
+  background: url(../img/doska2.png);
   height: 20px;
   z-index: 10;
+}
+
+.items__card::before {
+  content: "";
+  position: absolute;
+  background: url(../img/doska3.png);
+  height: 25px;
+  z-index: 10;
+  display: none;
+  left: 0%;
+  width: 550px;
 }
 
 .items__card {
@@ -94,12 +104,12 @@ h2, h3, p, span {
 }
 
 .item__prise::before {
-    content: "19.00$";
-    position: absolute;
-    font-size: 24px;
-    top: 18%;
-    left: 65%;
-    text-decoration: line-through;
+  content: "19.00$";
+  position: absolute;
+  font-size: 24px;
+  top: 18%;
+  left: 65%;
+  text-decoration: line-through;
 }
 
 .shop__cart {
@@ -142,11 +152,6 @@ input:active, :hover, :focus {
   padding-left: 35px;
 }
 
-section {
-  padding-bottom: 150px;
-  overflow: hidden;
-}
-
 /* scrollbar */
 ::-webkit-scrollbar-button {
   background-image: url('');
@@ -181,14 +186,78 @@ section {
   width: 4px;
 }
 
+.owl-dots {
+  display: flex;
+}
 
-////////////////
+.owl-dot {
+  padding: 5px;
+  background: transparent;
+  border: 3px solid #fff;
+  border-radius: 10px;
+  width: 20px;
+  height: 15px;
+  margin: 20px 5px 20px 5px;
+}
 
+.owl-dot.active {
+  background: #FFF;
+}
 
 /* media */
+
 @media (max-width: 767.98px) {
   .items::before {
     display: none;
+  }
+}
+/* iphone SE 5*/
+@media (min-width: 320px) and (max-width: 328px) {
+  .items__card::before {
+    display: block;
+    top: 57.5%;
+  }
+}
+/*  iphone 6/7/8  Iphone X */
+@media (width: 375px) {
+  .items__card::before {
+    display: block;
+    top: 61.5%;
+  }
+}
+/* Galaxy S5 MotoG4 */
+@media (width: 360px) {
+  .items__card::before {
+    display: block;
+    top: 60%;
+  }
+}
+/* Pixel2XL Pixel2*/
+@media (width: 411px) {
+  .items__card::before {
+    display: block;
+    top: 63%;
+  }
+}
+/* iphone 6/7/8 Plus */
+@media (width: 414px) {
+  .items__card::before {
+    display: block;
+    top: 64%;
+  }
+}
+
+@media (width: 425px) {
+  .items__card::before {
+    display: block;
+    top: 65%;
+  }
+}
+
+@media (min-width: 544px) and (max-width: 767.98px) {
+  .items__card::before {
+    display: block;
+    top: 70.5%;
   }
 }
 
@@ -221,10 +290,12 @@ section {
   .item__shop {
     padding-left: 10px;
   }
+  .product {
+    padding-bottom: 180px;
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
-
   .items h3 {
     font-size: 20px;
   }
@@ -246,22 +317,4 @@ section {
     left: 0;
     display: block;
   }
-}
-
-.owl-dots {
-  display: flex;
-}
-
-.owl-dot {
-  padding: 5px;
-  background: transparent;
-  border: 3px solid #fff;
-  border-radius: 10px;
-  width: 20px;
-  height: 15px;
-  margin: 20px 5px 20px 5px;
-}
-
-.owl-dot.active {
-  background: #FFF;
 }

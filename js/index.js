@@ -12,7 +12,7 @@ $(window).resize(function() {
 
 function showHomeSlider() {
   if ($homeSlider.data("owlCarousel") !== "undefined") {
-    if (window.matchMedia("(max-width: 768px)").matches) {
+    if (window.matchMedia("(max-width: 767.9px)").matches) {
       initialHomeSlider();
     } else {
       destroyHomeSlider();
