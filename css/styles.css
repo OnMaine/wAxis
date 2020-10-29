@@ -38,6 +38,7 @@ h2, h3, p, span {
   background-size: cover;
   background-position: center;
   padding-bottom: 150px;
+  min-height: 100vh;
 }
 
 .product__title {
