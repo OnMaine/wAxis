@@ -41,7 +41,7 @@ h2, h3, p, span {
 }
 
 .product__title {
-    padding-top: 170px;
+  padding-top: 170px;
 }
 
 .items {
@@ -118,14 +118,14 @@ h2, h3, p, span {
   background-color: transparent;
   border-radius: 23px;
   border: 3px solid #FFF;
-  overflow : hidden;
-  transition : 1.5s;
-  cursor : pointer;
+  overflow: hidden;
+  transition: 1.5s;
+  cursor: pointer;
 }
 
 input:active, :hover, :focus {
-    outline: 0 !important;
-    outline-offset: 0;
+  outline: 0 !important;
+  outline-offset: 0;
 }
 
 .icon {
@@ -134,18 +134,18 @@ input:active, :hover, :focus {
 }
 
 .btn__hover_bar {
-  background : linear-gradient(rgba(255,255,255,255),rgba(204,204,204,204));
-  width : 200px;
-  height : 50px;
-  margin-top : -50px;
-  transform : rotate(40deg);
-  margin-left : -180px;
-  opacity : 0.3;
-  transition : 1.5s;
+  background: linear-gradient(rgba(255, 255, 255, 255), rgba(204, 204, 204, 204));
+  width: 200px;
+  height: 50px;
+  margin-top: -50px;
+  transform: rotate(40deg);
+  margin-left: -180px;
+  opacity: 0.3;
+  transition: 1.5s;
 }
 
-.shop__cart:hover .btn__hover_bar{
-  margin-left : 180px;
+.shop__cart:hover .btn__hover_bar {
+  margin-left: 180px;
 }
 
 .item__shop {
@@ -205,12 +205,12 @@ input:active, :hover, :focus {
 }
 
 /* media */
-
 @media (max-width: 767.98px) {
   .items::before {
     display: none;
   }
 }
+
 /* iphone SE 5*/
 @media (min-width: 320px) and (max-width: 328px) {
   .items__card::before {
@@ -218,6 +218,7 @@ input:active, :hover, :focus {
     top: 57.5%;
   }
 }
+
 /*  iphone 6/7/8  Iphone X */
 @media (width: 375px) {
   .items__card::before {
@@ -225,6 +226,7 @@ input:active, :hover, :focus {
     top: 61.5%;
   }
 }
+
 /* Galaxy S5 MotoG4 */
 @media (width: 360px) {
   .items__card::before {
@@ -232,6 +234,7 @@ input:active, :hover, :focus {
     top: 60%;
   }
 }
+
 /* Pixel2XL Pixel2*/
 @media (width: 411px) {
   .items__card::before {
@@ -239,6 +242,7 @@ input:active, :hover, :focus {
     top: 63%;
   }
 }
+
 /* iphone 6/7/8 Plus */
 @media (width: 414px) {
   .items__card::before {
@@ -276,20 +280,25 @@ input:active, :hover, :focus {
   .items p {
     font-size: 35px;
   }
+
   .item__prise::before {
-      font-size: 20px;
-      top: 18%;
-      left: 65%;
+    font-size: 20px;
+    top: 18%;
+    left: 65%;
   }
+
   .item__prise {
     padding: 22px 0 5px 25px;
   }
+
   .item__order {
     padding-bottom: 20px;
   }
+
   .item__shop {
     padding-left: 10px;
   }
+
   .product {
     padding-bottom: 180px;
   }
@@ -299,9 +308,11 @@ input:active, :hover, :focus {
   .items h3 {
     font-size: 20px;
   }
+
   .items p {
     font-size: 40px;
   }
+
   .items::before {
     width: 930px;
     top: 55%;
